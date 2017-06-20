@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
 
-export default class Contact extends React.Component {
+export default class Info extends React.Component {
   constructor(props) {
     super(props);
     this.state = {}
   }
 
   render() {
-    return <h1>Contact component</h1>;
+    return (
+      <div>
+
+        Info component
+      </div>
+    );
   }
 }
