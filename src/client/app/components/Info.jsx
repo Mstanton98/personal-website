@@ -8,9 +8,10 @@ export default class Info extends React.Component {
 
   render() {
     return (
-      <div>
-
-        Info component
+      <div className="container">
+        <div className="row">
+          <h1 className="header twelve columns">Michael Stanton</h1>
+        </div>
       </div>
     );
   }

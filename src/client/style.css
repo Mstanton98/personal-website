@@ -1,3 +1,10 @@
+body {
+  background-color: #fff;
+}
+
+.header .twelve .columns {
+  background-color: #593F62;
+}
 
 #backgroundVid {
   position: absolute;

@@ -15,6 +15,10 @@ export default class Main extends React.Component {
     this.setState({ vidToggle: 'false' });
   }
 
+  backToSplash() {
+    this.setState({ vidToggle: 'true' });
+  }
+
   render() {
     return (
       this.state.vidToggle === 'true' ?
@@ -39,7 +43,9 @@ export default class Main extends React.Component {
           </div>
           :
           <div>
-            <Info />
+            <Info
+              backToSplash={this.backToSplash}
+           />
             <Contact />
           </div>
         );
