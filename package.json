@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "webpack": "webpack -p",
-    "start": "webpack-dev-server -d --history-api-fallback --inline --progress --colors --port 8000",
-    "build": "webpack -p"
+    "start": "webpack-dev-server --content-base src/client/"
   },
   "author": "Michael Stanton <mstanton98@gmail.com>",
   "license": "ISC",
@@ -22,6 +21,7 @@
     "webpack": "^2.6.1"
   },
   "devDependencies": {
+    "babel-preset-stage-0": "^6.24.1",
     "webpack-dev-server": "^2.4.5"
   }
 }

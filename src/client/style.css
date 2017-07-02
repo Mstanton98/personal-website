@@ -1,9 +1,45 @@
-* {
-  box-sizing: border-box;
+
+#backgroundVid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  opacity: 0.9;
+  filter: hue-rotate(220deg);
 }
 
-video #backgroundVid {
-  /*opacity: 0.7;*/
-  padding-bottom: 100%;
-  width: 100%;
+#labelContainer:hover {
+  opacity: 1;
+}
+
+#labelContainer {
+  position: relative;
+  opacity: 0.8;
+  background-color: #593F62;
+  margin-top: 20%;
+  margin-left: 40%;
+  margin-right: 40%;
+  padding-bottom: 1%;
+  padding-top: 1%;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+#indicator {
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  font-family: 'Lora', sans-serif;
+}
+
+.titleLabel {
+  position: relative;
+  text-align: center;
+  opacity: 0.8;
+  font-size: 50px;
+  font-family: 'Lora', sans-serif;
+  color: #fff;
+  margin-top: 10%;
+  z-index: 1;
 }

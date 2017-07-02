@@ -5,16 +5,13 @@ const BUILD_DIR = path.resolve(__dirname, 'src/client/public');
 const APP_DIR = path.resolve(__dirname, 'src/client/app');
 
 const config = {
-  entry: [
-    APP_DIR + '/index.jsx',
-  ],
+  entry: {
+    app: [ APP_DIR + '/index.jsx' ]
+  },
   output: {
     path: BUILD_DIR,
-    filename: 'bundle.js',
-    publicPath: 'http://localhost:8080/src/client/public/'
-  },
-  devServer: {
-    historyApiFallback: true
+    publicPath:'/public/',
+    filename: 'bundle.js'
   },
   watch: true,
   module: {
@@ -22,13 +19,14 @@ const config = {
       {
         test: /\.jsx?/,
         include: APP_DIR,
-        loader: 'babel-loader'
+        loader: 'babel-loader',
+        exclude: /node_modules/
       },
       {
         test: /\.css$/,
         include: APP_DIR,
         loader: 'style-loader!css-loader'
-      },
+      }
     ]
   }
 };
