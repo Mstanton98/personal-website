@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Contact from './Contact.jsx';
 import Info from './Info.jsx';
+import Header from './Header.jsx';
 
 export default class Main extends React.Component {
   constructor(props) {
@@ -22,7 +23,7 @@ export default class Main extends React.Component {
   render() {
     return (
       this.state.vidToggle === 'true' ?
-      <div>
+      <div className="animated fadeIn">
         <div
           onClick={this.onClickHandler}
           id="labelContainer"
@@ -42,11 +43,11 @@ export default class Main extends React.Component {
             </div>
           </div>
           :
-          <div>
+          <div className="infoContainer">
+            <Header />
             <Info
               backToSplash={this.backToSplash}
            />
-            <Contact />
           </div>
         );
       }
